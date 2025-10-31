@@ -1,16 +1,56 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+  <form method="post">
+    <h2>Signup Form</h2>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" required minlength="3" maxlength="50">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Email" required>
+
+    <label>Gender:</label>
+    <div class="gender">
+      <label for="gender_m"><input type="radio" id="gender_m" name="gender" value="male" required> Male</label>
+      <label for="gender_f"><input type="radio" id="gender_f" name="gender" value="female" required> Female</label>
+    </div>
+
+    <label for="cars">Car Brands:</label>
+    <select id="cars" name="cars" required>
+      <option value="">--Please choose an option--</option>
+      <option value="BMW">BMW</option>
+      <option value="Tesla">Tesla</option>
+      <option value="Audi">Audi</option>
+      <option value="Mercedes">Mercedes</option>
+    </select>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" placeholder="Age" required min="1" max="120">
+
+    <label for="dob">DOB:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="tel">Phone Number:</label>
+    <input type="tel" id="tel" name="tel" placeholder="xxx-xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Password" required>
+
+    <div class="checkbox">
+      <input type="checkbox" id="tos" name="tos" required>
+      <label for="tos">I agree to the TOS</label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
 
 </body>
-
 </html>
